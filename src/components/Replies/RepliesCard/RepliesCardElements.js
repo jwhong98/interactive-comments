@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 90%;
+  width: 100%;
   background-color: #fff;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   padding: 1rem;
   padding-bottom: 0;
   border-radius: 5px;

@@ -1,18 +1,14 @@
 import React from "react";
 import User from "./User";
-import {
-  CardContainer,
-  Content,
-  Badge,
-  Icon,
-  Score,
-  Reply,
-} from "./CommentCardElements";
-import plus from "../../assets/icon-plus.svg";
-import minus from "../../assets/icon-minus.svg";
+import { CardContainer, Content, Icon, Reply } from "./CommentCardElements";
+
 import reply from "../../assets/icon-reply.svg";
+import Badge from "../Badge";
+import Replies from "../Replies";
 
 const CommentCard = (props) => {
+  const hasReplies = props.replies.length > 0;
+  const replies = props.replies;
   return (
     <>
       <CardContainer>
@@ -22,16 +18,13 @@ const CommentCard = (props) => {
           createdAt={props.createdAt}
         />
         <Content>{props.content}</Content>
-        <Badge>
-          <Icon src={plus} />
-          <Score>{props.score}</Score>
-          <Icon src={minus} />
-        </Badge>
+        <Badge score={props.score} />
         <Reply>
           <Icon src={reply} />
           Reply
         </Reply>
       </CardContainer>
+      {hasReplies && <Replies replies={replies} />}
     </>
   );
 };
