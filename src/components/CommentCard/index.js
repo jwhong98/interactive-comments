@@ -14,23 +14,25 @@ import reply from "../../assets/icon-reply.svg";
 
 const CommentCard = (props) => {
   return (
-    <CardContainer>
-      <User
-        img={props.img}
-        username={props.username}
-        createdAt={props.createdAt}
-      />
-      <Content>{props.content}</Content>
-      <Badge>
-        <Icon src={plus} />
-        <Score>{props.score}</Score>
-        <Icon src={minus} />
-      </Badge>
-      <Reply>
-        <Icon src={reply} />
-        Reply
-      </Reply>
-    </CardContainer>
+    <>
+      <CardContainer>
+        <User
+          img={props.img}
+          username={props.username}
+          createdAt={props.createdAt}
+        />
+        <Content>{props.content}</Content>
+        <Badge>
+          <Icon src={plus} />
+          <Score>{props.score}</Score>
+          <Icon src={minus} />
+        </Badge>
+        <Reply>
+          <Icon src={reply} />
+          Reply
+        </Reply>
+      </CardContainer>
+    </>
   );
 };
 

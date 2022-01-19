@@ -1,6 +1,7 @@
 import "./App.css";
 import Body from "./components/Body";
 import CommentCard from "./components/CommentCard";
+import ReplyCard from "./components/ReplyCard";
 import data from "./data.json";
 
 function App() {
@@ -17,7 +18,12 @@ function App() {
       />
     );
   };
-  return <Body>{data.comments.map(createComment)}</Body>;
+  return (
+    <Body>
+      {data.comments.map(createComment)}
+      <ReplyCard />
+    </Body>
+  );
 }
 
 export default App;
