@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import User from "./User";
-import { CardContainer, Content, Icon, Reply } from "./CommentCardElements";
-
+import {
+  CardContainer,
+  Content,
+  UserSpecific,
+  Delete,
+  Edit,
+  Icon,
+  Reply,
+} from "./CommentCardElements";
+import del from "../../assets/icon-delete.svg";
+import edit from "../../assets/icon-edit.svg";
 import reply from "../../assets/icon-reply.svg";
 import Badge from "../Badge";
 import Replies from "../Replies";
+import ReplyCard from "../ReplyCard";
 
 const CommentCard = (props) => {
+  const [openReply, setOpenReply] = useState(false);
   const hasReplies = props.replies.length > 0;
   const replies = props.replies;
+  const currentUser = props.username === "juliusomo";
+
+  const replyHandler = () => {
+    setOpenReply(!openReply);
+  };
   return (
     <>
       <CardContainer>
@@ -19,12 +35,26 @@ const CommentCard = (props) => {
         />
         <Content>{props.content}</Content>
         <Badge score={props.score} />
-        <Reply>
-          <Icon src={reply} />
-          Reply
-        </Reply>
+        {currentUser ? (
+          <UserSpecific>
+            <Delete onClick={props.onOpen}>
+              <Icon src={del} />
+              Delete
+            </Delete>
+            <Edit>
+              <Icon src={edit} />
+              Edit
+            </Edit>
+          </UserSpecific>
+        ) : (
+          <Reply onClick={replyHandler}>
+            <Icon src={reply} />
+            Reply
+          </Reply>
+        )}
       </CardContainer>
-      {hasReplies && <Replies replies={replies} />}
+      {openReply && <ReplyCard text="reply" />}
+      {hasReplies && <Replies replies={replies} onDelete={props.onOpen} />}
     </>
   );
 };

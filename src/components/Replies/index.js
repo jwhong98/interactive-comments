@@ -13,6 +13,7 @@ const Replies = (props) => {
         img={info.user.image.webp}
         username={info.user.username}
         replyingTo={info.replyingTo}
+        onDelete={props.onDelete}
       />
     );
   };

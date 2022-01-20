@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const RepliesContainer = styled.div`
-  width: 90%;
+  width: 100%;
   background-color: hsl(228, 33%, 97%);
   margin-bottom: 1rem;
   padding-left: 1rem;

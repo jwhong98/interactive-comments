@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const ReplyContainer = styled.div`
-  width: 90%;
+  width: 100%;
   background-color: #fff;
   padding: 1rem;
   border-radius: 5px;
+  margin-bottom: 1rem;
 `;
 
 export const Textbox = styled.textarea`

@@ -21,7 +21,30 @@ export const Span = styled.span`
   font-weight: 700;
 `;
 
-export const Icon = styled.img``;
+export const UserSpecific = styled.div`
+  position: relative;
+  align-self: flex-end;
+  bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+`;
+
+export const Delete = styled.span`
+  color: hsl(358, 79%, 66%);
+  font-weight: 700;
+  margin-right: 1rem;
+  cursor: pointer;
+`;
+
+export const Edit = styled.span`
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+  cursor: pointer;
+`;
+
+export const Icon = styled.img`
+  margin-right: 0.5rem;
+`;
 
 export const Reply = styled.span`
   position: relative;
@@ -29,8 +52,7 @@ export const Reply = styled.span`
   bottom: 1.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 4rem;
   color: hsl(238, 40%, 52%);
   font-weight: 700;
+  cursor: pointer;
 `;

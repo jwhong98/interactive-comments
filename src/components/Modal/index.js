@@ -10,12 +10,12 @@ import {
   Delete,
 } from "./ModalElements,";
 
-const Modal = () => {
+const Modal = (props) => {
   const portalElement = document.getElementById("overlay");
   return (
     <>
       {ReactDOM.createPortal(
-        <Backdrop>
+        <Backdrop onClick={props.onClose}>
           <Overlay>
             <Confirmation>Delete comment</Confirmation>
             <Message>
@@ -23,7 +23,7 @@ const Modal = () => {
               comment and can't be undone.
             </Message>
             <ButtonWrap>
-              <Cancel>no, cancel</Cancel>
+              <Cancel onClick={props.onClose}>no, cancel</Cancel>
               <Delete>yes, delete</Delete>
             </ButtonWrap>
           </Overlay>

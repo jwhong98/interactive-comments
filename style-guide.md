@@ -18,8 +18,8 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- Dark blue: hsl(212, 24%, 26%)
-- Grayish Blue: hsl(211, 10%, 45%)
+- Dark blue: hsl(212, 24%, 26%) Headings
+- Grayish Blue: hsl(211, 10%, 45%) Text
 - Light gray: hsl(223, 19%, 93%)
 - Very light gray: hsl(228, 33%, 97%)
 - White: hsl(0, 0%, 100%)
