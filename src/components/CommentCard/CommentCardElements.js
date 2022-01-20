@@ -50,4 +50,8 @@ export const Reply = styled.span`
   color: hsl(238, 40%, 52%);
   font-weight: 700;
   cursor: pointer;
+
+  :hover {
+    color: hsl(239, 57%, 85%);
+  }
 `;

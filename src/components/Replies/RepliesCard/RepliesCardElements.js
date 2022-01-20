@@ -34,12 +34,20 @@ export const Delete = styled.span`
   font-weight: 700;
   margin-right: 1rem;
   cursor: pointer;
+
+  :hover {
+    color: hsl(357, 100%, 86%);
+  }
 `;
 
 export const Edit = styled.span`
   color: hsl(238, 40%, 52%);
   font-weight: 700;
   cursor: pointer;
+
+  :hover {
+    color: hsl(239, 57%, 85%);
+  }
 `;
 
 export const Icon = styled.img`
@@ -55,4 +63,7 @@ export const Reply = styled.span`
   color: hsl(238, 40%, 52%);
   font-weight: 700;
   cursor: pointer;
+  :hover {
+    color: hsl(239, 57%, 85%);
+  }
 `;

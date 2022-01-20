@@ -11,4 +11,8 @@ export const ButtonContainer = styled.button`
   padding: 0.75rem 2rem;
   border-radius: 10px;
   cursor: pointer;
+
+  :hover {
+    background-color: hsl(239, 57%, 85%);
+  }
 `;
