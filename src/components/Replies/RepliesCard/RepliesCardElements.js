@@ -16,6 +16,11 @@ export const Content = styled.p`
   margin-bottom: 1rem;
 `;
 
+export const Span = styled.span`
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+`;
+
 export const Icon = styled.img``;
 
 export const Reply = styled.span`

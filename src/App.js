@@ -1,6 +1,7 @@
 import "./App.css";
 import Body from "./components/Body";
 import CommentCard from "./components/CommentCard";
+import Modal from "./components/Modal";
 import ReplyCard from "./components/ReplyCard";
 import data from "./data.json";
 
@@ -19,10 +20,13 @@ function App() {
     );
   };
   return (
-    <Body>
-      {data.comments.map(createComment)}
-      <ReplyCard />
-    </Body>
+    <>
+      <Modal />
+      <Body>
+        {data.comments.map(createComment)}
+        <ReplyCard />
+      </Body>
+    </>
   );
 }
 
