@@ -8,7 +8,7 @@ export const Thread = styled.div`
   align-items: center;
 
   @media ${device.desktop} {
-    max-width: 800px;
+    max-width: 740px;
   }
 `;
 
@@ -41,7 +41,6 @@ export const Content = styled.p`
     grid-column: 2/4;
     grid-row: 2/4;
     margin-bottom: 0;
-    max-width: 700px;
   }
 `;
 

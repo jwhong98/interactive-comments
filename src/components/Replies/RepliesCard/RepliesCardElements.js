@@ -13,7 +13,7 @@ export const CardContainer = styled.div`
 
   @media ${device.desktop} {
     display: grid;
-    grid-template-columns: 3rem auto 6.5rem;
+    grid-template-columns: 3rem auto 9rem;
     gap: 1rem;
     /* grid-template-rows: repeat(1fr, auto); */
   }
@@ -27,8 +27,7 @@ export const Content = styled.p`
   @media ${device.desktop} {
     grid-column: 2/4;
     grid-row: 2/4;
-    /* margin-bottom: 0;
-    max-width: 700px; */
+    margin-bottom: 0;
   }
 `;
 

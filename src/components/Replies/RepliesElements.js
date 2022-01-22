@@ -14,7 +14,7 @@ export const RepliesContainer = styled.div`
   /* align-items: right; */
 
   @media ${device.desktop} {
-    max-width: 650px;
+    max-width: 700px;
     padding-left: 3rem;
     align-self: flex-end;
   }
