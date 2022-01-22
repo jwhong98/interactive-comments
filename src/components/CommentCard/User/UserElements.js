@@ -1,9 +1,16 @@
 import styled from "styled-components";
+import { device } from "../../../deviceSize";
 
 export const UserInfo = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+
+  @media ${device.desktop} {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
 `;
 
 export const ProfileImg = styled.img`
@@ -13,7 +20,6 @@ export const ProfileImg = styled.img`
 
 export const Username = styled.span`
   font-weight: 700;
-
   color: hsl(212, 24%, 26%);
 `;
 

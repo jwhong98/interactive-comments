@@ -48,6 +48,7 @@ export const Cancel = styled.button`
   background-color: hsl(211, 10%, 45%);
   font-weight: 500;
   font-size: 1rem;
+  cursor: pointer;
 `;
 
 export const Delete = styled.button`
@@ -60,4 +61,5 @@ export const Delete = styled.button`
   background-color: hsl(358, 79%, 66%);
   font-weight: 500;
   font-size: 1rem;
+  cursor: pointer;
 `;

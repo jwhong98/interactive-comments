@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../deviceSize";
 
 export const RepliesContainer = styled.div`
   width: 100%;
@@ -10,4 +11,11 @@ export const RepliesContainer = styled.div`
   flex-direction: column;
   border-left: 2px solid hsl(223, 19%, 93%);
   gap: 1rem;
+  /* align-items: right; */
+
+  @media ${device.desktop} {
+    max-width: 650px;
+    padding-left: 3rem;
+    align-self: flex-end;
+  }
 `;

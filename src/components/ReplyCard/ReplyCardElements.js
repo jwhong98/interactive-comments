@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../deviceSize";
 
 export const ReplyContainer = styled.div`
   width: 100%;
@@ -6,6 +7,10 @@ export const ReplyContainer = styled.div`
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+
+  @media ${device.desktop} {
+    max-width: 800px;
+  }
 `;
 
 export const Textbox = styled.textarea`

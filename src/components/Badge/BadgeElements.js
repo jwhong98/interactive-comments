@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../deviceSize";
 
 export const BadgeContainer = styled.span`
   padding: 0.5rem 0.75rem;
@@ -8,6 +9,15 @@ export const BadgeContainer = styled.span`
   align-items: center;
   justify-content: space-between;
   width: 6rem;
+
+  @media ${device.desktop} {
+    flex-direction: column;
+    width: 2.5rem;
+    height: 6rem;
+    padding: 0.75rem 0.5rem;
+    grid-column: 1;
+    grid-row: 1/3;
+  }
 `;
 
 export const Icon = styled.img`

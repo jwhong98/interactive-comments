@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import User from "./User";
 import {
+  Thread,
   CardContainer,
   Content,
   UserSpecific,
@@ -26,7 +27,7 @@ const CommentCard = (props) => {
     setOpenReply(!openReply);
   };
   return (
-    <>
+    <Thread>
       <CardContainer>
         <User
           img={props.img}
@@ -55,7 +56,7 @@ const CommentCard = (props) => {
       </CardContainer>
       {openReply && <ReplyCard text="reply" />}
       {hasReplies && <Replies replies={replies} onDelete={props.onOpen} />}
-    </>
+    </Thread>
   );
 };
 

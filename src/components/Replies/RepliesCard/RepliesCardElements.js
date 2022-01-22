@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../deviceSize";
 
 export const CardContainer = styled.div`
   width: 100%;
@@ -9,11 +10,26 @@ export const CardContainer = styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+
+  @media ${device.desktop} {
+    display: grid;
+    grid-template-columns: 3rem auto 6.5rem;
+    gap: 1rem;
+    /* grid-template-rows: repeat(1fr, auto); */
+  }
 `;
 
 export const Content = styled.p`
   color: hsl(211, 10%, 45%);
   margin-bottom: 1rem;
+  line-height: 1.5;
+
+  @media ${device.desktop} {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    /* margin-bottom: 0;
+    max-width: 700px; */
+  }
 `;
 
 export const Span = styled.span`
@@ -27,6 +43,14 @@ export const UserSpecific = styled.div`
   bottom: 1.75rem;
   display: flex;
   align-items: center;
+
+  @media ${device.desktop} {
+    position: unset;
+    align-self: unset;
+    bottom: 0;
+    grid-column: 3/4;
+    grid-row: 1;
+  }
 `;
 
 export const Delete = styled.span`
@@ -63,7 +87,16 @@ export const Reply = styled.span`
   color: hsl(238, 40%, 52%);
   font-weight: 700;
   cursor: pointer;
+
   :hover {
     color: hsl(239, 57%, 85%);
+  }
+
+  @media ${device.desktop} {
+    align-self: unset;
+    margin-left: auto;
+    bottom: 0;
+    grid-column: 3;
+    grid-row: 1;
   }
 `;
